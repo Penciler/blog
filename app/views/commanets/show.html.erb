@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Post:</strong>
+  <%= @commanet.post %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @commanet.body %>
+</p>
+
+<%= link_to 'Edit', edit_commanet_path(@commanet) %> |
+<%= link_to 'Back', commanets_path %>

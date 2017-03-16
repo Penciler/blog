@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Commanets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Post</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @commanets.each do |commanet| %>
+      <tr>
+        <td><%= commanet.post %></td>
+        <td><%= commanet.body %></td>
+        <td><%= link_to 'Show', commanet %></td>
+        <td><%= link_to 'Edit', edit_commanet_path(commanet) %></td>
+        <td><%= link_to 'Destroy', commanet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Commanet', new_commanet_path %>
